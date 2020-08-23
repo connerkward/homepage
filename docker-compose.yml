@@ -4,7 +4,7 @@ services:
        image: nginx
        container_name: landingpage
        volumes:
-           - ./site-content:/usr/share/nginx/html
+           - ./:/usr/share/nginx/html
        expose:
           - "80"
 networks:
