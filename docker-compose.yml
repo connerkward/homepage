@@ -1,0 +1,13 @@
+version: '2'
+services:
+    app:
+       image: nginx
+       container_name: landingpage
+       volumes:
+           - ./site-content:/usr/share/nginx/html
+       expose:
+          - "80"
+networks:
+  default:
+    external:
+      name: web
