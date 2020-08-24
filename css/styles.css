@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap");
 html {
   /* color: rgb(31, 153, 82); */
+  color: rgb(255, 255, 255);
   font-family: "Courier New", Courier, monospace;
   /* background: rgb(250, 238, 201); */
   /* width: 50%; */
@@ -12,15 +13,14 @@ nav {
 }
 body {
   /* color: rgb(31, 153, 82); */
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: url("/images/background.png");
-  background-size: cover;
-  background-repeat: repeat;
+  /* color: white; */
+  /* background: url("/images/background.png"); */
+  /* background-size: cover; */
+  /* background-repeat: repeat; */
 }
 a {
-  background: black;
-  color: white;
-  padding: 1rem;
+  /* background: black; */
+  /* color: white; */
+  /* padding: 1rem; */
   /* text-decoration: none; */
 }
