@@ -15,7 +15,7 @@ body {
   /* color: rgb(31, 153, 82); */
   /* color: white; */
   background: url("/images/background.png");
-  /* background-size: cover; */
+  background-size: cover;
   /* background-repeat: repeat; */
 }
 a {
