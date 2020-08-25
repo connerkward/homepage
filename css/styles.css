@@ -1,13 +1,13 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap"); */
 html {
   /* color: rgb(31, 153, 82); */
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-family: "Courier New", Courier, monospace;
   /* background: rgb(250, 238, 201); */
   /* width: 50%; */
 }
 nav {
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   /* background: black; */
   padding: 1rem;
 }
