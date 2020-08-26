@@ -21,7 +21,7 @@ ul.topnav li a {
   display: block;
   color: orange;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 14px;
   text-decoration: none;
 }
 
@@ -36,6 +36,7 @@ ul.topnav li a.active {
 ul.topnav li a.logocontainer {
   background-color: black;
   text-align: left;
+  /* width: 25.75% */
 }
 
 ul.topnav li.right {
@@ -50,29 +51,16 @@ ul.topnav li.right {
     background-color: orange;
   }
 }
-
-a {
-  color: white;
-  /* text-decoration: none; */
-}
 .logoresponsive {
   max-width: 5%;
   display: inline;
-  padding-inline-start: 1%;
-  padding-inline-end: 1.5%;
 }
-/* .logocontainer{ */
-  /* display: inline; */
-  /* background-color: orange; */
-/* } */
 .logotext {
   display: inline;
   font-family: 'Libre Baskerville', serif;
   color: orange;
   font-size: xx-large;
-}
-body {
-
+  padding: 0.5rem
 }
 h1{
   font-family: 'Libre Baskerville', serif;
