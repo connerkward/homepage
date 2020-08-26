@@ -62,7 +62,13 @@ ul.topnav li.right {
   font-size: xx-large;
   padding: 0.5rem
 }
+a{
+  color: orange;
+}
 h1{
+  font-family: 'Libre Baskerville', serif;
+}
+h3{
   font-family: 'Libre Baskerville', serif;
 }
 .col-1 {width: 8.33%;}
