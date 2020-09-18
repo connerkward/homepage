@@ -2,7 +2,8 @@
 html {
   /* color: rgb(31, 153, 82); */
   color: orange;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Fira Code,Monaco,Consolas,Ubuntu Mono,monospace;
+  /* font-family: "Courier New", Courier, monospace; */
   background: rgb(0, 0, 0);
 }
 ul.topnav {
