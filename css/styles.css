@@ -6,7 +6,7 @@ html {
   font-family: "Courier New", Courier, monospace;
   background: rgb(0, 0, 0);
 }
-ul.topnav {
+ol.topnav {
   /* font-family: 'Libre Baskerville', serif; */
   /* font-weight: lighter; */
   list-style-type: none;
@@ -16,9 +16,9 @@ ul.topnav {
   background-color: black;
 }
 
-ul.topnav li {float: left;}
+ol.topnav li {float: left;}
 
-ul.topnav li a {
+ol.topnav li a {
   display: block;
   color: orange;
   text-align: center;
@@ -26,28 +26,28 @@ ul.topnav li a {
   text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: rgb(80, 79, 79);}
+ol.topnav li a:hover:not(.active) {background-color: rgb(80, 79, 79);}
 
-ul.topnav li a.active {
+ol.topnav li a.active {
   background-color: orange;
   color: black;
   font-weight: bold;
 }
 
-ul.topnav li a.logocontainer {
+ol.topnav li a.logocontainer {
   background-color: black;
   text-align: left;
   /* width: 25.75% */
 }
 
-ul.topnav li.right {
+ol.topnav li.right {
   float: right;
 }
 
 @media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-  ul.topnav li a.logocontainer {
+  ol.topnav li.right, 
+  ol.topnav li {float: none;}
+  ol.topnav li a.logocontainer {
     text-align: center;
     /* background-color: black; */
   }
