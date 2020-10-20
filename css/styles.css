@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 :root {
-  --color: orange;
+  --color: orange; 
+  /* #f3f3cd */
   --background: black;
   --middle: grey;
   --body_font: "Courier New", Courier, monospace;
@@ -124,6 +125,15 @@ hr {
   /* float:right; */
 }
 
+.bannerimage2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  /* height: 20%; */
+  /* float:right; */
+}
+
 .asideimage {
   /* width: 100%; */
   height: 20%;
@@ -138,6 +148,20 @@ footer {
 input[type="text"], textarea, input[type="submit"]{
   color: var(--color);
   background-color : var(--background); 
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .col-1 {
@@ -176,3 +200,5 @@ input[type="text"], textarea, input[type="submit"]{
 .col-12 {
   width: 100%;
 }
+
+
