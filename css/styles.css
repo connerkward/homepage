@@ -135,6 +135,11 @@ footer {
   font-size: small;
 }
 
+input[type="text"], textarea, input[type="submit"]{
+  color: var(--color);
+  background-color : var(--background); 
+}
+
 .col-1 {
   width: 8.33%;
 }
