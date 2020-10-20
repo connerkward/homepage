@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stargods.net</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+
 <body>
     <nav>
         <ol class="topnav">
@@ -16,56 +19,71 @@
                     <strong class="logotext">StarGods</strong>
                 </a>
             <li>
-                <a class=active href="index.html" id="home">Home</a>
+                <a href="index.html" id="home">Home</a>
             </li>
             <li>
                 <a href="about.html" id="about">About</a>
             </li>
             <li>
-                <a href="contact.html" id="contact">Contact</a>
+                <a class=active href="contact.html" id="contact">Contact</a>
             </li>
             <!--Right Aligned-->
-            <li class='right' dir="rtl">
-                <a href="about.html" id="right1">⏣</a>
-            </li>
             <li class='right'>
-                <a href="about.html" id="right2">⏅</a>
-            </li>
-    
+                <a href="https://github.com/connerkward/AssetTracker" id="right1" target="_blank"><strong
+                        class="material-icons" style="color:var(--color);">qr_code_scanner</strong></a></li>
+
             <li class='right'>
-                <a href="about.html" id="right3">⏂</a>
+                <a href="https://inv.stargods.net/docs" id="right2" target="_blank"><strong class="material-icons"
+                        style="color:var(--color);">api</strong></a>
             </li>
-    
+
             <li class='right'>
-                <a href="about.html" id="right4">⏀</a>
+                <a href="https://matrix.org/" id="right3" target="_blank"><strong class="material-icons"
+                        style="color:var(--color);">message</strong></a>
             </li>
-    
+
             <li class='right'>
-                <a href="about.html" id="right5">⏆</a>
+                <a href="https://github.com/connerkward/SmartSpaceBucket" id="right4" target="_blank"><strong
+                        class="material-icons" style="color:var(--color);">grass</strong></a>
             </li>
-    
+
             <li class='right'>
-                <a href="https://matrix.stargods.net/" target="_blank" rel="noopener noreferrer">⍒</a></li>
+                <a href="https://gofundme.com" id="right6" target="_blank"><strong class="material-icons"
+                        style="color:var(--color);">monetization_on</strong></a></li>
+
+            <li class='right'>
+                <a href="https://github.com/connerkward" id="right5" target="_blank"><strong class="material-icons"
+                        style="color:var(--color);">design_services</strong></a>
+            </li>
         </ol>
     </nav>
-    <h1>Our Contact Info.</h1>
-    <h3>The Federated Matrix Protocol</h3>
-    <p>What is the Matrix chat protocol?</p>
-    <p>Imagine your cell phone provider is Verizon. Image then not being able to call people on Sprint or ATT. Ridiculous right?</p>
-    <p>This is exactly the current state of instant chat.</p>
-    <p>Enter Matrix. Matrix is a federated chat protocol, which means it can be used by any chat provider as a unified standard. Anyone can run a server, meaning you own your data, not Facebook. Federation means that Matrix servers also can talk to each other meaning inter-community communication, interaction lacking from most of today's social silo'ed echo chamber ecosystems.</p>
-    <p>Imagine sending messages to Slack via Facebook Messenger or Slack messages to a Discord server. Sync a WeChat room and a
-    Slack room. Send chat commands to your home assistant or home automation. The way chat was meant to be.</p>
-    <p>Join the movement!</p>
-        <p>Easily start your own:</p>
-        <p><a href="https://element.io/" target="_blank" rel="noopener noreferrer">Element.io</a>
-    <p>Our instance:</p>
-    <p><a href="https://matrix.stargods.net/" target="_blank" rel="noopener noreferrer">matrix.stargods.net</a>
-    </p>
-    </p>
-    <br>
-    <br>
-    <br>
-    <br>
+    <main>
+        <h1 class="falseheader">Contact Us.</h1>
+        <form>
+            <label for="fname">First name: </label>
+            <input type="text" name="fname" id="fname" />
+
+            <label for="email">Email: </label>
+            <br>
+            <input type="text" id="email" name="email" text="Email:">
+
+            <br><br>
+            <label for="message">Message</label>
+            <textarea name="message" rows="10" cols="30" text="Enter Message:" type="text" id="message">Enter message</textarea>
+
+            <br><br>
+
+            <label for="submit">Submit:<input type="text" id="submit"></label>
+            
+        </form>
+    </main>
+    <footer>
+        <br>
+        <hr>
+        Stargods.Net, 2020.
+        <br>
+        Design by Conner Ward.
+    </footer>
 </body>
+
 </html>
