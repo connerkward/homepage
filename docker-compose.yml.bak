@@ -1,0 +1,14 @@
+version: '2'
+services:
+    app:
+       image: nginx
+       container_name: landingpage
+       volumes:
+           - ./:/usr/share/nginx/html
+       expose:
+          - "80"
+#       restart: unless-stopped
+networks:
+  default:
+    external:
+      name: web
