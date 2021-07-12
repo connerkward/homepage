@@ -1,0 +1,3 @@
+<a href="/web/viewer.html?file=%2Ffolio.pdf">Open PDF.js Viewer</a>
+<iframe id="pdf-js-viewer" src="/web/viewer.html?file=%2Ffolio.pdf" title="webviewer" frameborder="0" width="500" height="600"></iframe>
+
