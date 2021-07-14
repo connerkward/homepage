@@ -23,7 +23,7 @@ ol.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: black;
+  /* background-color: black; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -35,7 +35,7 @@ ol.topnav li {
 
 ol.topnav li a {
   display: block;
-  color: orange;
+  /* color: orange; */
   text-align: center;
   padding: 12px 14px;
   text-decoration: none;
@@ -52,10 +52,10 @@ ol.topnav li a.active {
 }
 
 ol.topnav li a.logocontainer {
-  background-color: black;
+  /* background-color: black; */
   align-self: flex-start;
 }
-    
+
 ol.topnav li.right {
   float: right;
   display: none;
@@ -68,7 +68,7 @@ ol.topnav li.right {
 .logotext {
   display: inline;
   font-family: 'Libre Baskerville', serif;
-  color: orange;
+  /* color: orange; */
   font-size: xx-large;
   padding: 0.5rem
 }
@@ -108,3 +108,10 @@ h3 {
     width: 1.9rem;
   }
 }
+
+/* @media screen and (prefers-color-scheme: dark) {
+  html {
+    background-color: white;
+    color: black;
+  }
+} */
