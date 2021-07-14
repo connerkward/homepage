@@ -6,9 +6,12 @@ pipeline {
             steps {
                 catchError {
                     sh 'docker container stop landingpage'
-                    sh 'docker container prune -f'
                 }           
                 echo currentBuild.result
+                
+                sh 'docker container prune -f'
+                sh 'docker image prune -f'
+                sh 'docker volume prune -f'
             }
         }
         stage('Git') {
