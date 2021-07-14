@@ -55,7 +55,7 @@ ol.topnav li a.logocontainer {
   background-color: black;
   align-self: flex-start;
 }
-
+    
 ol.topnav li.right {
   float: right;
   display: none;
