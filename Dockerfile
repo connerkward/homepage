@@ -1,2 +1,2 @@
 FROM nginx:latest
-COPY /output /usr/share/nginx/html/
+COPY /oldwebsite /usr/share/nginx/html/

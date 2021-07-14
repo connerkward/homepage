@@ -3,7 +3,7 @@
 
 AUTHOR = 'Conner Ward'
 SITENAME = 'Conner'
-SITESUBTITLE='Developer'
+# SITESUBTITLE='Developer' # could be cool one day
 # SITEURL = 'https://connerward.dev'
 # GITHUB_URL='http://github.com/connerkward' # creates an ugly 2012 banner
 
@@ -30,7 +30,7 @@ SOCIAL_WIDGET_NAME="SOCIAL"
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 2
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -47,8 +47,13 @@ ARTICLE_URL = 'posts/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{slug}.html'
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
-MENUITEMS=[("portfolio", "google.com"),]
+MENUITEMS=[("Home", "/"),("Portfolio", "/portfolio"),]
+DELETE_OUTPUT_DIRECTORY=True
 
 LOAD_CONTENT_CACHE=True
 CACHE_PATH='temp/pelican'
 CACHE_CONTENT=True
+
+# THEME='content/themes/basic/'
+# THEME_STATIC_PATHS = [THEME]
+# CSS_FILE = 'content/themes/basic/style.css'
