@@ -7,6 +7,15 @@ html {
   background: rgb(0, 0, 0);
 }
 
+.content {
+  margin: 0.5rem;
+}
+
+::selection {
+  background-color: orange;
+  color: black;
+}
+
 ol.topnav {
   /* font-family: 'Libre Baskerville', serif; */
   /* font-weight: lighter; */
@@ -15,6 +24,9 @@ ol.topnav {
   padding: 0;
   overflow: hidden;
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 ol.topnav li {
@@ -41,31 +53,16 @@ ol.topnav li a.active {
 
 ol.topnav li a.logocontainer {
   background-color: black;
-  text-align: left;
-  /* width: 25.75% */
+  align-self: flex-start;
 }
 
 ol.topnav li.right {
   float: right;
-}
-
-@media screen and (max-width: 600px) {
-  /* ol.topnav li.right,  */
-  ol.topnav li {
-    float: none;
-  }
-  ol.topnav li a.logocontainer {
-    text-align: center;
-    /* background-color: black; */
-  }
-  ol.topnav li.right {
-    display: none;
-  }
+  display: none;
 }
 
 .logoresponsive {
-  max-width: 5%;
-  display: inline;
+  width: 2rem;
 }
 
 .logotext {
@@ -90,4 +87,25 @@ h2 {
 
 h3 {
   font-family: 'Libre Baskerville', serif;
+}
+
+@media screen and (max-width: 600px) {
+  /* ol.topnav li.right,  */
+  ol.topnav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  /* ol.topnav li a.logocontainer {
+    text-align: center;
+    /* background-color: black; */
+  } */
+  /* ol.topnav li.right {
+    display: none;
+  } */
+  .content {
+    margin: 0rem;
+  }
+  .logoresponsive {
+    width: 1.9rem;
+  }
 }
