@@ -4,8 +4,11 @@ pipeline {
     stages {
         stage('Stop Curr Container') {
             steps {
-                sh 'docker container stop landingpage'
-                sh 'docker container prune -f'
+                catchError {
+                    sh 'docker container stop landingpage'
+                    sh 'docker container prune -f'
+                }           
+                echo currentBuild.result
             }
         }
         stage('Git') {
