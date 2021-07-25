@@ -32,13 +32,13 @@ pipeline {
             steps {
                 sh 'rm -R content'
                 sh "ls"
-                sh 'rm -R static/img'
+                sh 'rm -R public/img/'
                 sh "ls"
                 sh "cp -r blogcontent/posts content"
                 sh "cd content && ls"
-                sh "cp -r blogcontent/img static/"
+                sh "cp -r blogcontent/img public/"
                 sh "cd static && ls"
-                sh "cd static/img && ls"
+                sh "cd public/img && ls"
             }
         }
      
