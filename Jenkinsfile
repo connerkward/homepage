@@ -15,24 +15,7 @@ pipeline {
             }
         }
         stage ('Extract') {
-            parallel {
-                stage("dingo") {
-                    steps {
-                        git(
-                            url: 'https://github.com/connerkward/blogcontent.git',
-                            credentialsId: 'connerkward',
-                            // branch: "${branch}"
-                        )
-                    }
-                }
-                stage ("dingo2") {
-                    steps {
-                        git(
-                            url: 'https://github.com/connerkward/landingpage.git'
-                        )
-                    }
-                }
-            }   
+            
         }   
     
         stage('Build Dockerfile') {
