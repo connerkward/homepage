@@ -20,7 +20,7 @@ pipeline {
             steps {
                 dir('dingo') {
                     git credentialsId: 'githubpat', url: 'https://github.com/connerkward/blogcontent'
-                    sh "ls"
+                    sh "cd dingo && ls"
                 }
                 
                 sh "ls"
