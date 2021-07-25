@@ -16,7 +16,7 @@ pipeline {
         }
 
         stage ('Extract') {
-            parallel 'Extract':{
+            parallel 'Extract'{
                 dir('dino') {
                     git(
                         url: 'https://github.com/connerkward/blogcontent.git',
