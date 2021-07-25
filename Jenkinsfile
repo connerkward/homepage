@@ -37,6 +37,7 @@ pipeline {
     
         stage('Build Dockerfile') {
             steps {
+                sh 'ls'
                 sh 'docker build -t landingpage .'
                 sh 'ls'
             }
