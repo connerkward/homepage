@@ -14,15 +14,25 @@ pipeline {
                 sh 'docker volume prune -f'
             }
         }
-        stage ('ghub') {
+        stage ('Extract') {
             steps {
-                git url: 'https://github.com/connerkward/blogcontent.git'
-            }
+                stage("dingo") {
+                    git(
+                        url: 'https://github.com/connerkward/blogcontent.git',
+                        credentialsId: 'connerkward',
+                        // branch: "${branch}"
+                    )
+                }
+                stage('project2') {
+                    git(
+                        url: 'https://github.com/connerkward/landingpage.git'
+                    )
+                }
+            }   
         }   
     
         stage('Build Dockerfile') {
             steps {
-                sh 'ls'
                 sh 'docker build -t landingpage .'
                 sh 'ls'
             }
