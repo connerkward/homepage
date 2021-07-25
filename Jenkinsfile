@@ -17,11 +17,10 @@ pipeline {
 
         stage ('Extract') {
             parallel 'Extract':{
-                dir('project1') {
+                dir('dino') {
                     git(
                         url: 'https://github.com/connerkward/blogcontent.git',
                         credentialsId: 'connerkward',
-                        // branch: "${branch}"
                     )
                     sh "ls"
                 }
