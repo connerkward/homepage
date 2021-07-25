@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 # install node modules and build assets
 RUN npm install 
-RUN npx build && npx export
+RUN npx next build && npx next export
  
 
 # Serve via NGINX
