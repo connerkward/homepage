@@ -29,13 +29,13 @@ pipeline {
                     credentialsId: 'connerkward',
                     // branch: "${branch}"
                 )
-                sh "ls -lat"
+                sh "ls"
                 git(
                     url: 'https://github.com/connerkward/landingpage.git',
                     credentialsId: 'connerkward',
                     // branch: "${branch}"
                 )
-                sh "ls -lat"
+                sh "ls"
             }
         }
         stage('Build Dockerfile') {
