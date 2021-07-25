@@ -22,9 +22,19 @@ pipeline {
         //         sh 'ls'
         //     }
         // }
-        stage('Checkout code') {
+        stage('Checkout external proj') {
             steps {
-                checkout scm
+                git(
+                    url: 'https://github.com/connerkward/blogcontent.git',
+                    credentialsId: 'connerkward',
+                    // branch: "${branch}"
+                )
+                sh "ls -lat"
+                git(
+                    url: 'https://github.com/connerkward/landingpage.git',
+                    credentialsId: 'connerkward',
+                    // branch: "${branch}"
+                )
                 sh "ls -lat"
             }
         }
