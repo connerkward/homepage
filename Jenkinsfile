@@ -17,16 +17,20 @@ pipeline {
         stage ('Extract') {
             parallel {
                 stage("dingo") {
-                    git(
+                    steps {
+                        git(
                             url: 'https://github.com/connerkward/blogcontent.git',
                             credentialsId: 'connerkward',
                             // branch: "${branch}"
                         )
+                    }
                 }
                 stage ("dingo2") {
-                    git(
+                    steps {
+                        git(
                             url: 'https://github.com/connerkward/landingpage.git'
                         )
+                    }
                 }
             }   
         }   
