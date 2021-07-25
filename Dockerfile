@@ -1,2 +1,15 @@
+# Build the Image
+FROM node:10 AS builder
+# Set working directory
+WORKDIR /app
+# Copy all files from current directory to working dir in image
+COPY . .
+# install node modules and build assets
+RUN npm install && npm build && npm export
+
+
+# Serve via NGINX
 FROM nginx:latest
-COPY /oldwebsite /usr/share/nginx/html/
+WORKDIR /usr/share/nginx/html
+COPY --from=builder /app/out .
+# COPY /out /usr/share/nginx/html/
