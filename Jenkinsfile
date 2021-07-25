@@ -20,7 +20,7 @@ pipeline {
             steps {
                 git(
                         url: 'https://github.com/connerkward/blogcontent.git',
-                        credentialsId: 'connerkward',
+                        credentialsId: 'githubpat',
                         // branch: "${branch}"
                     )
                 git(
