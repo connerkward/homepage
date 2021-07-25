@@ -21,7 +21,7 @@ pipeline {
                 dir('blogcontent') {
                     // git url: 'https://github.com/connerkward/blogcontent', credentialsId: 'githubpat'
                     // sh "cd dingo && ls"
-                    checkout scm: [source: 'https://github.com/connerkward/blogcontent', clean: true, credentialsId: 'githubpat']
+                    checkout scm: [$class: 'GitSCM', source: 'https://github.com/connerkward/blogcontent', clean: true, credentialsId: 'githubpat']
 
                 }
                 sh "ls"
