@@ -11,5 +11,7 @@ RUN npm install && npm build && npm export
 # Serve via NGINX
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
+# RUN rm -rf ./*
 COPY --from=builder /app/out .
 # COPY /out /usr/share/nginx/html/
+# ENTRYPOINT ["nginx", "-g", "daemon off;"]
