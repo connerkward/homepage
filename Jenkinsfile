@@ -15,7 +15,7 @@ pipeline {
 
                 sh "ls"
             }
-        }
+        } 
         stage ('Extract') {
             steps {
                 dir('dingo') {
