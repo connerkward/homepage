@@ -14,11 +14,17 @@ pipeline {
                 sh 'docker volume prune -f'
             }
         }
-        stage('Git') {
+        // stage('Git') {
+        //     steps {
+        //         git 'https://github.com/connerkward/landingpage'
+        //         sh 'ls'
+        //         git 'https://github.com/connerkward/blogcontent'
+        //         sh 'ls'
+        //     }
+        // }
+        stage('Checkout code') {
             steps {
-                git 'https://github.com/connerkward/landingpage'
-                sh 'ls'
-                git 'https://github.com/connerkward/blogcontent'
+                checkout scm
                 sh 'ls'
             }
         }
