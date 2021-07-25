@@ -18,6 +18,8 @@ pipeline {
             steps {
                 git 'https://github.com/connerkward/landingpage'
                 sh 'ls'
+                git 'https://github.com/connerkward/blogcontent'
+                sh 'ls'
             }
         }
         stage('Build Dockerfile') {
