@@ -18,12 +18,28 @@ pipeline {
         } 
         stage ('Extract') {
             steps {
-                dir('blogcontent') {
-                    git url: 'https://github.com/connerkward/blogcontent', credentialsId: 'githubpat', branch: 'main'
+                // cleanWs()
+                dir ("blogcontent") {
+                    script {
+                        git url: 'https://github.com/connerkward/blogcontent', credentialsId: 'githubpat', branch: 'main'
+                    }
+                    sh "ls"
                 }
                 sh "ls"
             }   
         }    
+        stage ("replace content and images folders") {
+            steps {
+                sh 'rm -R content'
+                sh 'rm -R static/img'
+                sh "ls"
+                sh "cp -r blogcontent/posts content"
+                sh "cd content && ls"
+                sh "cp -r blogcontent/img static/"
+                sh "cd static && ls"
+                sh "cd static/img && ls"
+            }
+        }
      
         stage('Build Dockerfile') {
             steps {
