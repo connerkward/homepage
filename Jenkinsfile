@@ -31,6 +31,7 @@ pipeline {
         stage ("replace content and images folders") {
             steps {
                 sh 'rm -R content'
+                sh "ls"
                 sh 'rm -R static/img'
                 sh "ls"
                 sh "cp -r blogcontent/posts content"
