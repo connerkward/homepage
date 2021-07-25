@@ -22,21 +22,24 @@ pipeline {
         //         sh 'ls'
         //     }
         // }
-        stage('Checkout external proj') {
-            steps {
-                git(
-                    url: 'https://github.com/connerkward/blogcontent.git',
-                    credentialsId: 'connerkward',
-                    // branch: "${branch}"
-                )
-                sh "ls"
-                // git(
-                    // url: 'https://github.com/connerkward/landingpage.git',
-                    // credentialsId: 'connerkward',
-                    // branch: "${branch}"
-                // )
-                sh "ls"
-            }
+
+        stage ('Extract') {
+            parallel 'Extract':{
+                dir('project1') {
+                        git(
+                        url: 'https://github.com/connerkward/blogcontent.git',
+                        credentialsId: 'connerkward',
+                        // branch: "${branch}"
+                    )
+                    sh "ls"
+                }
+                dir('project2') {
+                    git(
+                        url: 'https://github.com/connerkward/landingpage.git',
+                    )
+                    sh "ls"
+                }
+            }   
         }
         stage('Build Dockerfile') {
             steps {
