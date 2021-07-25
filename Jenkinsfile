@@ -37,7 +37,7 @@ pipeline {
                 sh "cp -r blogcontent/posts content"
                 sh "cd content && ls"
                 sh "cp -r blogcontent/img public/"
-                sh "cd static && ls"
+                sh "cd public && ls"
                 sh "cd public/img && ls"
             }
         }
