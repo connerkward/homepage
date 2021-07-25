@@ -14,19 +14,11 @@ pipeline {
                 sh 'docker volume prune -f'
             }
         }
-        // stage('Git') {
-        //     steps {
-        //         git 'https://github.com/connerkward/landingpage'
-        //         sh 'ls'
-        //         git 'https://github.com/connerkward/blogcontent'
-        //         sh 'ls'
-        //     }
-        // }
 
         stage ('Extract') {
             parallel 'Extract':{
                 dir('project1') {
-                        git(
+                    git(
                         url: 'https://github.com/connerkward/blogcontent.git',
                         credentialsId: 'connerkward',
                         // branch: "${branch}"
