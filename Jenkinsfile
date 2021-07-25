@@ -15,10 +15,7 @@ pipeline {
             }
         }
         stage ('ghub') {
-            checkout([$class: 'GitSCM', 
-                branches: [[name: '*/master']],
-                credentialsId: 'ghub',
-                userRemoteConfigs: [[url: 'hhttps://github.com/connerkward/blogcontent']]])
+            git url: 'https://github.com/connerkward/blogcontent.git'
         }   
     
         stage('Build Dockerfile') {
