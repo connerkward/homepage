@@ -19,9 +19,10 @@ pipeline {
         stage ('Extract') {
             steps {
                 dir('dingo') {
-                    checkout scm
+                    git credentialsId: 'githubpat', url: 'https://github.com/connerkward/blogcontent'
+                    sh "ls"
                 }
-                git credentialsId: 'githubpat', url: 'https://github.com/connerkward/blogcontent'
+                
                 sh "ls"
             }   
         }    
