@@ -14,19 +14,23 @@ pipeline {
                 sh 'docker volume prune -f'
             }
         }
-
-        node() {
-            stage ('Extract') {
-                parallel 'Extract':{
-                    dir('project1') {
-                        git url: 'ssh://git@githost/project1.git'
-                    }
-                    dir('project2') {
-                        git url: 'ssh://git@githost/project2.git'
-                    }
-                }   
+        stage ('Extract') {
+            parallel 'Extract':{
+                dir('project1') {
+                    git(
+                        url: 'https://github.com/connerkward/blogcontent.git',
+                        credentialsId: 'connerkward',
+                        // branch: "${branch}"
+                    )
+                }
+                dir('project2') {
+                    git(
+                        url: 'https://github.com/connerkward/landingpage.git'
+                    )
+                }
             }   
-        }
+        }   
+    
         stage('Build Dockerfile') {
             steps {
                 sh 'docker build -t landingpage .'
