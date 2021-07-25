@@ -12,6 +12,8 @@ pipeline {
                 sh 'docker container prune -f'
                 sh 'docker image prune -f'
                 sh 'docker volume prune -f'
+
+                sh "ls"
             }
         }
         stage ('Extract') {
