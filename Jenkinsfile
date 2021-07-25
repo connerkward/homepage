@@ -19,7 +19,7 @@ pipeline {
         stage ('Extract') {
             steps {
                 dir('dingo') {
-                    git credentialsId: 'githubpat', url: 'https://github.com/connerkward/blogcontent'
+                    git credentialsId: 'githubpat', url: 'https://github.com/connerkward/blogcontent' 
                     sh "cd dingo && ls"
                 }
                 
