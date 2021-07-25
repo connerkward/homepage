@@ -1,0 +1,28 @@
+{
+  "name": "next-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build && next export",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
+    "next": "^11.0.1",
+    "next-optimized-images": "^2.6.2",
+    "pdfjs-dist": "^2.8.335",
+    "raw-loader": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-image-crop": "^8.6.12",
+    "react-markdown": "^6.0.2",
+    "styled-jsx": "^3.3.2"
+  }
+}
