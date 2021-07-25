@@ -16,6 +16,7 @@ pipeline {
         }
         stage ('Extract') {
             sh "ls"
+            sh "ls"
         }   
     
         stage('Build Dockerfile') {
