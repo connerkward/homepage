@@ -15,7 +15,9 @@ pipeline {
             }
         }
         stage ('ghub') {
-            git url: 'https://github.com/connerkward/blogcontent.git'
+            steps {
+                git url: 'https://github.com/connerkward/blogcontent.git'
+            }
         }   
     
         stage('Build Dockerfile') {
