@@ -27,10 +27,10 @@ pipeline {
                 }
                 stage ("dingo2") {
                     dir('project2') {
-                    git(
-                        url: 'https://github.com/connerkward/landingpage.git'
-                    )
-                }
+                        git(
+                            url: 'https://github.com/connerkward/landingpage.git'
+                        )
+                    }
                 }
             }   
         }   
