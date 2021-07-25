@@ -24,8 +24,8 @@ pipeline {
                 git credentialsId: 'githubpat', url: 'https://github.com/connerkward/blogcontent'
                 sh "ls"
             }   
-        }   
-    
+        }    
+     
         stage('Build Dockerfile') {
             steps {
                 sh 'docker build -t landingpage .'
