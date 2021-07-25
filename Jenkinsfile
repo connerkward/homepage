@@ -15,18 +15,22 @@ pipeline {
             }
         }
         stage ('Extract') {
-            parallel 'Extract':{
-                dir('project1') {
-                    git(
-                        url: 'https://github.com/connerkward/blogcontent.git',
-                        credentialsId: 'connerkward',
-                        // branch: "${branch}"
-                    )
+            parallel {
+                stage("dingo") {
+                    dir('project1') {
+                        git(
+                            url: 'https://github.com/connerkward/blogcontent.git',
+                            credentialsId: 'connerkward',
+                            // branch: "${branch}"
+                        )
+                    }
                 }
-                dir('project2') {
+                stage ("dingo2") {
+                    dir('project2') {
                     git(
                         url: 'https://github.com/connerkward/landingpage.git'
                     )
+                }
                 }
             }   
         }   
