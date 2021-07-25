@@ -25,7 +25,7 @@ pipeline {
         stage('Checkout code') {
             steps {
                 checkout scm
-                sh 'ls'
+                sh "ls -lat"
             }
         }
         stage('Build Dockerfile') {
