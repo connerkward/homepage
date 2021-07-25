@@ -14,8 +14,11 @@ pipeline {
                 sh 'docker volume prune -f'
             }
         }
-        stage ('Extract') {
-            sh "ls"
+        stage ('ghub') {
+            checkout([$class: 'GitSCM', 
+                branches: [[name: '*/master']],
+                credentialsId: 'ghub',
+                userRemoteConfigs: [[url: 'hhttps://github.com/connerkward/blogcontent']]])
         }   
     
         stage('Build Dockerfile') {
