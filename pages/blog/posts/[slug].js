@@ -8,6 +8,7 @@ import Headline from "../../../components/Headline"
 var PostTemplate = (props) => {
   // This holds the data between `---` from the .md file
   // const frontmatter = data
+  props = props.pageProps
   return (
     <div className="main">
       <div className="midboldtitle">{props.title}</div>
