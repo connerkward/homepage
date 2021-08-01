@@ -14,7 +14,7 @@ module.exports = {
   //     '/blog': { page: '/blog.html' },
   //   }
   // },
-  // trailingSlash: true,
+  // trailingSlash: true, Why did I enable this?
   images: {
     loader: 'imgix',
     path: '/',
