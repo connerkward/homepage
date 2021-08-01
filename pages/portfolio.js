@@ -1,7 +1,7 @@
 var Portfolio = (props) => {
     return (
         <div className="main">
-            Dingo
+            <Link as={`/portfolio/pdf`} href={`/portfolio/pdf`}>PDF</Link>
         </div>
     );
     
