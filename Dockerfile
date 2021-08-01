@@ -11,9 +11,8 @@ RUN npx next build && npx next export
 
 # Serve via NGINX
 FROM nginx:latest
-WORKDIR /usr/share/nginx/html
 # RUN rm -rf ./* # what is this for?
-COPY --from=builder /app/out .
+COPY --from=builder /app/out /usr/share/nginx/html
 
 # copy nginx conf files
 # COPY ./nginx.conf /etc/nginx/conf.d/default.conf
