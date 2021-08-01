@@ -17,6 +17,6 @@ COPY --from=builder /app/out .
 
 # copy nginx conf files
 # COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-COPY ./nginx.conf /etc/nginx/nginx.conf 
+COPY ./nginx-page.conf /etc/nginx/conf.d/
 
 # ENTRYPOINT ["nginx", "-g", "daemon off;"] # what is this for? (I think its used in lieu of docker run)
