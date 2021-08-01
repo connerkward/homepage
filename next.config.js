@@ -14,7 +14,7 @@ module.exports = {
   //     '/blog': { page: '/blog.html' },
   //   }
   // },
-  trailingSlash: true,
+  // trailingSlash: true,
   images: {
     loader: 'imgix',
     path: '/',
