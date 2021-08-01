@@ -15,7 +15,7 @@ FROM nginx:latest
 COPY --from=builder /app/out /usr/share/nginx/html
 
 # copy nginx conf files
-# COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx-page.conf /etc/nginx/conf.d/default.conf
-#RUN rm -R /etc/nginx/sites-enabled/
+
 # ENTRYPOINT ["nginx", "-g", "daemon off;"] # what is this for? (I think its used in lieu of docker run)
