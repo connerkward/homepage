@@ -16,5 +16,5 @@ WORKDIR /usr/share/nginx/html
 COPY --from=builder /app/out .
 
 # copy nginx conf files
-COPY --from=builder ./app/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 # ENTRYPOINT ["nginx", "-g", "daemon off;"] # what is this for? (I think its used in lieu of docker run)
