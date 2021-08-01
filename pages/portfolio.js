@@ -2,7 +2,7 @@
 var Portfolio = (props) => {
     return (
         <div className="main">
-            <Link as={`/portfolio/pdf`} href={`/portfolio/pdf`}>PDF</Link>
+            <a as={`/portfolio/pdf`} href={`/portfolio/pdf`}>PDF</a>
         </div>
     );
     
