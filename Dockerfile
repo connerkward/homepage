@@ -12,7 +12,9 @@ RUN npx next build && npx next export
 # Serve via NGINX
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
-# RUN rm -rf ./*
+# RUN rm -rf ./* # what is this for?
 COPY --from=builder /app/out .
-# COPY /out /usr/share/nginx/html/
-# ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+# copy nginx conf files
+COPY --from=builder ./nginx.conf /etc/nginx/conf.d/default.conf
+# ENTRYPOINT ["nginx", "-g", "daemon off;"] # what is this for? (I think its used in lieu of docker run)
