@@ -68,7 +68,7 @@ var PostPreview = (props) => {
         <div className="postpreview">
             <div className="coverimage">
                 {props.postSlug ? (
-                    <Link as={`/blog/posts/${props.postSlug}`} href="/blog/posts/[slug]">
+                    <Link as={`/blog/posts/${props.postSlug}`} href={`/blog/posts/${props.postSlug}`}>
                         <a aria-label={props.postTitle}>{image}</a>
                     </Link>
                 ) : (
@@ -77,7 +77,7 @@ var PostPreview = (props) => {
             </div>
             <div className="postpreviewdata">
                 <div className="postpreviewtitle">
-                    <Link as={`/blog/posts/${props.postSlug}`} href="/blog/posts/[slug]">
+                    <Link as={`/blog/posts/${props.postSlug}`} href={`/blog/posts/${props.postSlug}`}>
                         <a aria-label={props.postTitle}>{props.postTitle}</a>
                     </Link>
                 </div>
