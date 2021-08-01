@@ -1,3 +1,4 @@
+// this should redirect client a url (/pdf) which caddy will redirect to another docker container 
 var Portfolio = (props) => {
     return (
         <div className="main">
