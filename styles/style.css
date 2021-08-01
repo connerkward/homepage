@@ -528,6 +528,15 @@ footer {
     margin-left: -1rem;
     margin-right: -1rem;
   }
+  /* .pindexstories .postpreview {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+  } */
+  .pindexstories .postpreview {
+    margin-left: 2rem;
+    height: auto;
+  }
 }
 
 /* LIGHT MODE ============= */
