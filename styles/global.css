@@ -120,6 +120,7 @@ nav ol {
   padding: 0;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  align-items: baseline;
 }
 
 /* Box Around LI */
@@ -507,6 +508,10 @@ footer {
   nav ol #nav-right {
     display: none;
   }
+  .n {
+    margin: 120rem;
+  }
+
   .errorpagecontainer {
     flex-direction: column;
     margin-top: 0rem;

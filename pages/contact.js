@@ -1,8 +1,12 @@
+import Headline from "../components/Headline"
+import Link from "next/link"
+
 var Contact = () => {
     return (
         <div className="main">
-            <div className="smallboldtitle">Contact</div>
-            <p>Occaecat consectetur labore et do minim amet excepteur exercitation. Velit occaecat exercitation consequat commodo quis mollit magna consectetur ea Lorem est ex voluptate ullamco. Fugiat enim eiusmod ad incididunt id. Labore duis ad enim proident excepteur sint dolor irure amet aute ex. Labore magna deserunt dolor esse enim irure quis nostrud aute duis dolor tempor. 
+            <Headline props={{ title: "Contact", subtitle: "Say hi! 👋" }}></Headline>
+            <p></p>
+            <p>Must. Hide. Info. From. Bots! Contact form perhaps?
             </p>
         </div>
     )

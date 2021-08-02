@@ -1,7 +1,10 @@
+import Headline from "../components/Headline"
+import Link from "next/link"
+
 var Homepage = (props) => {
     return (
         <div className="main">
-            Dingo
+            <Headline props={{ title: "Welcome", subtitle: "Hi... you!" }}></Headline>
         </div>
     );
     

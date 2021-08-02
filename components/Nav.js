@@ -5,7 +5,7 @@ var Nav = (props) => {
     const activepage = props.props.props.active
     const navitem = (page, activePage) => {
         const capPage = lib.firstLetterToUpper(page)
-        if (activePage == page){
+        if (activePage == page) {
             return (<li>
                 <Link href={`/${page}`} id={page}><strong>{capPage}</strong></Link>
             </li>)
@@ -14,9 +14,9 @@ var Nav = (props) => {
                 <Link href={`/${page}`} id={`${page}`}>{capPage}</Link>
             </li>)
         }
-        
+
     }
-    
+
     return (
         <nav>
             <ol>
@@ -24,7 +24,9 @@ var Nav = (props) => {
                     <Link href="/">
                         {/* <img src="public/images/logo.png" alt="yellow stargods dot net logo" className="logoresponsive"></img> */}
                         <a href="/">
-                            <strong>ConWard_</strong>
+                            <strong>Conner Ward</strong>
+                            {/* <img className="logoimg" src="/img/1.jpeg" width="25" height="25" /> */}
+                            {/* <p className="n">Dev</p> */}
                         </a>
                     </Link>
                 </li>
@@ -51,8 +53,17 @@ var Nav = (props) => {
                     <a href="search" id="nav-right-link">᳇</a>
                 </li>
             </ol>
+            {/* For styling logo image */}
+            <style jsx>
+                {`
+                .logoimg {
+                    filter: invert(1) sepia(37.5%);
+                }
+                `}
+            </style>
         </nav>
-    )}
+    )
+}
 // ֍ ߷ ☞ ⟁ 𐂖
 // ᳇ ᮚ ᮘ ᮑ ᜦ ᙎ ພ ผ พ
 // ♜
