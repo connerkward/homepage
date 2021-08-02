@@ -462,11 +462,10 @@ footer {
     /* margin-left: 1rem; */
     margin-bottom: 0.5rem;
   }
-  nav ol li a {
-    /* margin: 0rem; */
+  /* nav ol li a {
     padding: 0rem;
-  }
-  nav ol li #logo {
+  } */
+  nav ol #logo {
     /* background-color: ; */
     /* margin-right: 50vmax; */
     padding-right: 54vmin;

@@ -68,18 +68,18 @@ var PostPreview = (props) => {
         <div className="postpreview">
             <div className="coverimage">
                 {props.postSlug ? (
-                    <a as={`/blog/posts/${props.postSlug}`} href={`/blog/posts/${props.postSlug}`}>
+                    <Link as={`/blog/posts/${props.postSlug}`} href={`/blog/posts/${props.postSlug}`}>
                         <a aria-label={props.postTitle}>{image}</a>
-                    </a>
+                    </Link>
                 ) : (
                     image
                 )}
             </div>
             <div className="postpreviewdata">
                 <div className="postpreviewtitle">
-                    <a as={`/blog/posts/${props.postSlug}`} href={`/blog/posts/${props.postSlug}`}>
+                    <Link as={`/blog/posts/${props.postSlug}`} href={`/blog/posts/${props.postSlug}`}>
                         <a aria-label={props.postTitle}>{props.postTitle}</a>
-                    </a>
+                    </Link>
                 </div>
                 <div className="postpreviewdate">{props.postDate}</div>
                 <ReactMarkdown className="postpreviewtext">{props.postPreviewText}</ReactMarkdown>

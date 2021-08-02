@@ -1,4 +1,5 @@
 import * as lib from "../lib/processing"
+import Link from "next/link"
 
 var Nav = (props) => {
     const activepage = props.props.props.active
@@ -6,11 +7,11 @@ var Nav = (props) => {
         const capPage = lib.firstLetterToUpper(page)
         if (activePage == page){
             return (<li>
-                <a href={`/${page}`} id={page}><strong>{capPage}</strong></a>
+                <Link href={`/${page}`} id={page}><strong>{capPage}</strong></Link>
             </li>)
         } else {
             return (<li>
-                <a href={`/${page}`} id={`${page}`}>{capPage}</a>
+                <Link href={`/${page}`} id={`${page}`}>{capPage}</Link>
             </li>)
         }
         
@@ -19,11 +20,13 @@ var Nav = (props) => {
     return (
         <nav>
             <ol>
-                <li>
-                    <a href="/" id="logo">
+                <li id="logo">
+                    <Link href="/">
                         {/* <img src="public/images/logo.png" alt="yellow stargods dot net logo" className="logoresponsive"></img> */}
-                        <strong>ConWard_</strong>
-                    </a>
+                        <a href="/">
+                            <strong>ConWard_</strong>
+                        </a>
+                    </Link>
                 </li>
                 {/* <li>
                     <a href="/" id="home">Home</a>

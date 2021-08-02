@@ -1,8 +1,12 @@
+import Link from "next/link"
+
 // this should redirect client a url (/pdf) which caddy will redirect to another docker container 
 var Portfolio = (props) => {
     return (
         <div className="main">
-            <a href={`/portfolio/pdf`}>PDF</a>
+            <Link as={`/portfolio/pdf`} href={`/portfolio/pdf`}>
+                <a aria-label="pdf">PDF</a>
+            </Link>
         </div>
     );
     

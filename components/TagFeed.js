@@ -12,7 +12,7 @@ const TagFeed = (props) => {
     props = {tags: tagsFormatted}
     return (
         <div className="tagfeed">
-            <div className="midboldtitle" id="popular-tags"><a href="/blog/tags">Popular Tags</a></div>
+            <div className="midboldtitle" id="popular-tags"><Link href="/blog/tags">Popular Tags</Link></div>
             <ol className="posttags">
                 {props.tags.map((tag) => { return <TagTagWithCount props={tag}/> })}
             </ol>
