@@ -1,6 +1,7 @@
-import '../styles/style.css'
+import '../styles/global.css'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import Head from "next/head";
 
 // Placed on every single page
 // This default export is required in a new `pages/_app.js` file.

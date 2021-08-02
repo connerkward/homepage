@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Major+Mono+Display&family=Montserrat&family=Mystery+Quest&family=Righteous&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Righteous&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&font-display=block');
+/* Local Fonts (not working) */
+
+/* @font-face {
+  font-family: "MajorMonoDisplay";
+  src: url("/fonts/MajorMonoDisplay-Regular.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url("/fonts/Righteous-Regular.ttf") format('ttf');
+  font-display: swap;
+} */
+
 /* Assumes Dark Mode */
 
 /* Maybe use font-family: "Major Mono Display"; as the "kicker" bold text inside a post / article */
@@ -69,6 +85,19 @@ p {
 ::selection {
   background-color: orange;
   color: black;
+}
+
+.errorpagecontainer {
+  margin-top: 35vh;
+  margin-bottom: 35vh;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* gap: 2rem; */
+  /* background-color: #ff8400; */
+  place-self: center;
+  justify-self: center;
 }
 
 /* NAV ================== */
@@ -254,7 +283,7 @@ nav ol #logo {
 
 .postpreviewdate {
   margin-bottom: 1rem;
-  font-family: "Major Mono Display", system-ui, "-apple-system", "BlinkMacSystemFont", 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: "MajorMonoDisplay", "Major Mono Display", system-ui, "-apple-system", "BlinkMacSystemFont", 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -435,6 +464,10 @@ footer {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  .errorpagetext {
+    margin-top: 28vh;
+    margin-bottom: 29vh;
+  }
   nav {
     margin: 0;
     padding: 0;
@@ -473,6 +506,11 @@ footer {
   }
   nav ol #nav-right {
     display: none;
+  }
+  .errorpagecontainer {
+    flex-direction: column;
+    margin-top: 0rem;
+    gap: 0rem;
   }
   .headline {
     /* flex-direction: column; */
