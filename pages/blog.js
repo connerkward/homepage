@@ -7,11 +7,13 @@ import { promises as fs } from 'fs'
 import TagFeed from "../components/TagFeed"
 import matter from 'gray-matter'
 import * as lib from "../lib/processing"
+import Head from "next/head";
 
 var Blog = (props) => {
   props = props.pageProps
   return (
     <div className="main">
+      <Head><title>Conner Ward - Blog</title></Head>
       <Headline props={{title:"Blog.", subtitle:"What's not UX?"}}></Headline>             
       <PostPreview props={props.posts.post1}></PostPreview>
       <MoreStories props={props}></MoreStories>

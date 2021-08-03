@@ -1,9 +1,11 @@
 import Headline from "../components/Headline"
 import Link from "next/link"
+import Head from "next/head";
 
 var Contact = () => {
     return (
         <div className="main">
+            <Head><title>Conner Ward - Contact</title></Head>
             <Headline props={{ title: "Contact", subtitle: "Say hi! 👋" }}></Headline>
             <p>Must. Hide. Info. From. BOTS. Contact form perhaps?
             </p>

@@ -1,5 +1,6 @@
 import Headline from "../components/Headline"
 import Link from "next/link"
+import Head from "next/head";
 
 var Homepage = (props) => {
     return (
