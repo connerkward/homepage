@@ -5,8 +5,7 @@ var Contact = () => {
     return (
         <div className="main">
             <Headline props={{ title: "Contact", subtitle: "Say hi! 👋" }}></Headline>
-            <p></p>
-            <p>Must. Hide. Info. From. Bots! Contact form perhaps?
+            <p>Must. Hide. Info. From. BOTS. Contact form perhaps?
             </p>
         </div>
     )

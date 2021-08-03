@@ -30,24 +30,9 @@ var Nav = (props) => {
                         </a>
                     </Link>
                 </li>
-                {/* <li>
-                    <a href="/" id="home">Home</a>
-                </li> */}
-                {/* <li>
-                    <a href="/portfolio" id="portfolio">Portfolio</a>
-                </li> */}
                 {navitem("portfolio", activepage)}
-                {/* <li>
-                    <a href="/blog" id="blog"><strong>Blog</strong></a>
-                </li> */}
                 {navitem("blog", activepage)}
-                {/* <li>
-                    <a href="/about" id="about">About</a>
-                </li> */}
                 {navitem("about", activepage)}
-                {/* <li>
-                    <a href="/contact" id="contact">Contact</a>
-                </li> */}
                 {navitem("contact", activepage)}
                 <li id="nav-right">
                     <a href="search" id="nav-right-link">᳇</a>
