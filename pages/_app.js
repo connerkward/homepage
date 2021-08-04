@@ -21,7 +21,7 @@ export default function MyApp(props) {
             <meta name="author" content="Conner Ward" />
             {/* facebook meta tags */}
             <meta property="og:title" content="Conner Ward" />
-            <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png"/>
+            <meta property="og:image" content="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/apple/155/test-tube_1f9ea.png"/>
             <meta property="og:description" content="UX Design, Web Dev, Embedded Software."/>
         </Head>
         <Nav props={{ props: { active: props.pageProps.active}}}></Nav>
