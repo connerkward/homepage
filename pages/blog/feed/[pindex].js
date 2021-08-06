@@ -60,6 +60,7 @@ export async function getStaticProps({ params }) {
     }).sort(function (a, b) { return b.data.date - a.data.date });
     
     // number of pages (based on 10 per page)
+    // pagination : [{data:{}, content:""},]
     const pageCount = Math.ceil(postData.length / POSTSPERPAGE)
     var pagination = []
     var postsAppended = 0;
@@ -75,18 +76,9 @@ export async function getStaticProps({ params }) {
         }
         pagination.push(page)
     }
-
+    
     // GET ALL TAGS(with count)
-    var tagCounts = {}
-    postData.forEach(post => {
-        post.data.tags.forEach(tag => {
-            if (tag in tagCounts) {
-                tagCounts[`${tag}`] += 1
-            } else {
-                tagCounts[`${tag}`] = 1
-            }
-        })
-    });
+    var tagCounts = lib.tagCountsContent(postData)
 
     function templatePost(data) {
         return {

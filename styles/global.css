@@ -307,9 +307,10 @@ nav ol #logo {
 }
 
 .posttag a {
-  font-weight: 600;
+  font-weight: 300;
   font-size: medium;
   text-decoration-line: none;
+  color: var(--offwhite);
 }
 
 .posttagcount {
@@ -629,6 +630,7 @@ footer {
     font-weight: 600;
     color: var(--trueblack);
   }
+
   .posttagcount {
     border-color: var(--anothergrey);
   }

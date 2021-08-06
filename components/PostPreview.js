@@ -78,7 +78,7 @@ var PostPreview = (props) => {
             <div className="postpreviewdata">
                 <div className="postpreviewtitle">
                     <Link as={`/blog/posts/${props.postSlug}`} href={`/blog/posts/${props.postSlug}`}>
-                        <a aria-label={props.postTitle}>{props.postTitle}</a>
+                        {props.postTitle}
                     </Link>
                 </div>
                 <div className="postpreviewdate">{props.postDate}</div>

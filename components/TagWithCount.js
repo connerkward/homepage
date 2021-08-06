@@ -6,8 +6,13 @@ const TagWithCount = (props) => {
     // console.log(props)
     return (
         <li className="posttagcount" key={props.tagslug}>
-            <div className="counttagtext">{props.tagtext}</div>
-            <div className="counttagcount">{props.tagcount}</div>
+            <Link href={`/blog/tags/${props.tagslug}`}>
+                <div>
+                    <div className="counttagtext">{props.tagtext}</div>
+                    <div className="counttagcount">{props.tagcount}</div>
+                </div>
+            </Link>
+            
         </li>
     )
 }

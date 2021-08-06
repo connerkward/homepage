@@ -1,11 +1,10 @@
 import Link from 'next/link'
 
 const Tag = (props) => {
-    const newtagslug = `/tags/${props.props.tagslug}`
     return (
         <li className="posttag" key={props.props.tagslug}>
-            <div>{props.props.tagtext}</div>
-            {/* <Link href={`/${newtagslug}`}>{props.tagtext}</Link> */}
+            {/* <Link as={`/blog/tags/${props.props.tagslug}`} href={`/blog/tags/${props.props.tagslug}`}>{props.tagtext}</Link> */}
+            <Link className="a" href={`/blog/tags/${props.props.tagslug}`}>{props.props.tagslug}</Link>
         </li>
     )
 }

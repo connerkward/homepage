@@ -46,18 +46,9 @@ export async function getStaticProps(context) {
     })
     return fileData
   }));
-  
+
   // GET ALL TAGS(with count)
-  var tagCounts = {}
-  postsData.forEach(post => {
-    post.tags.forEach(tag => {
-      if (tag in tagCounts){
-        tagCounts[`${tag}`] += 1
-      } else {
-        tagCounts[`${tag}`] = 1
-      }
-    })
-  });
+  var tagCounts = lib.tagCounts(postsData)
 
   // sort by date, filter by "hero"
   const dateSortedPostsData = postsData.sort((a, b) => a - b)
