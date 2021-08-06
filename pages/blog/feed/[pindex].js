@@ -5,7 +5,7 @@ import matter from "gray-matter"
 import * as lib from "../../../lib/processing"
 import PaginationNav from '../../../components/PaginationNav'
 
-const POSTSPERPAGE = 6
+const POSTSPERPAGE = 4
 
 var PaginationIndex = (props) => {
     props = props.pageProps
