@@ -1,5 +1,5 @@
 # homepage
-Next.js Blog with Git CMS, via Docker with Jenkins
+Static Next.js Blog with Git CMS, via Nginx, Docker, Jenkins
 
 
 Live Site:
