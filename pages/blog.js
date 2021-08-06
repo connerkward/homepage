@@ -14,7 +14,7 @@ var Blog = (props) => {
   return (
     <div className="main">
       <Head><title>Conner Ward - Blog</title></Head>
-      <Headline props={{title:"Blog.", subtitle:"What's not UX?"}}></Headline>             
+      <Headline props={{title:"Blog", subtitle:"What's not UX?"}}></Headline>             
       <PostPreview props={props.posts.post1}></PostPreview>
       <MoreStories props={props}></MoreStories>
       <TagFeed props={props}></TagFeed>
@@ -82,6 +82,7 @@ export async function getStaticProps(context) {
       colorRotation: lib.randomChoice(lib.COLORSCHEMES),
       width: 10,
       height: 5,
+      objectFit: "fill",
       // prefColor: COLORSCHEMESMAP[postData.prefcolor],
       // invert: false,
       // grayscale: false,

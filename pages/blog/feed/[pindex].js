@@ -5,7 +5,7 @@ import matter from "gray-matter"
 import * as lib from "../../../lib/processing"
 import PaginationNav from '../../../components/PaginationNav'
 
-const POSTSPERPAGE = 5
+const POSTSPERPAGE = 6
 
 var PaginationIndex = (props) => {
     props = props.pageProps
@@ -16,12 +16,13 @@ var PaginationIndex = (props) => {
     return (
         <div className="main">
             <div className="pindextitlecontainer">
-                <div className="midboldtitle">Page {props.pindex}</div>
+                <div className="midboldtitle mobilepaginationtitle">P{props.pindex}</div>
+                <div className="midboldtitle paginationtitle">Page {props.pindex}</div>
                 <PaginationNav props={props} />
             </div>
             <ol className="pindexstories">
                 {props.posts.map((post) => {
-                    return <li className="morestoriescontainer" key={post.postSlug}>
+                    return <li key={post.postSlug}>
                         <PostPreview className="postpreview" props={post}></PostPreview>
                     </li>
                 })}
@@ -99,7 +100,8 @@ export async function getStaticProps({ params }) {
             }),
             colorRotation: lib.randomChoice(lib.COLORSCHEMES),
             width: 10,
-            height: 5,
+            height: 7.5,
+            objectFit: "fill",
             // prefColor: COLORSCHEMESMAP[postData.prefcolor],
             // invert: false,
             // grayscale: false,

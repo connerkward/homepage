@@ -35,7 +35,7 @@ var Nav = (props) => {
                 {navitem("about", activepage)}
                 {navitem("contact", activepage)}
                 <li id="nav-right">
-                    <a href="search" id="nav-right-link">᳇</a>
+                    <a href="search" id="nav-right-link"><strong>~</strong></a>
                 </li>
             </ol>
             {/* For styling logo image */}

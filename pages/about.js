@@ -6,7 +6,7 @@ var About = (props) => {
     return (
         <div className="main">
             <Head><title>Conner Ward - About</title></Head>
-            <Headline props={{ title: "About.", subtitle: "The Deets. 🧑🏻‍💻" }}></Headline>
+            <Headline props={{ title: "About", subtitle: "The Deets. 🧑🏻‍💻" }}></Headline>
             <p>Lorem everything you wanted to know, and everything you didn't.
             </p>
         </div>

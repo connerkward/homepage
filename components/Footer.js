@@ -7,7 +7,6 @@ var Footer = () => {
             <div className="footercontainer">2021 <strong>connerward</strong></div>
             <div className="footercontainer"><strong>github</strong></div>
             <div className="footercontainer">built with <strong>next.js</strong> </div>
-            <div className="footercontainer">ᮘ</div>
             <div className="footercontainer"><strong>version</strong> 0.0.1</div>
         </footer>
     )

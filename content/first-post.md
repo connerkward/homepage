@@ -5,7 +5,7 @@ date: 2020-01-01
 hero: true
 herobig: false
 tags: [cars, car, lamborghini, BMW, automation, zebras]
-imgfilename: 6.jpeg
+imgfilename: 25.jpeg
 prefcolor: red
 ---
 # Header

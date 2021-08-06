@@ -40,7 +40,7 @@ var PostPreview = (props) => {
                         priority={true}
                         className="coverimage"
                     // placeholder={`blur`}
-                    // object-fit={"cover"}
+                        objectFit={props.objectFit}
                     />
                 </div>
             </div>
@@ -86,7 +86,7 @@ var PostPreview = (props) => {
                 <ul className="posttags">
                     {props.tags.map((tag) => (
                         <Tag props={{ tagslug: tag.tagslug, tagtext: tag.tagtext }} key={tag.tagslug}></Tag>
-                    ))}
+                    )).slice(0, 3)}
                 </ul>
             </div>
         </div>
