@@ -5,7 +5,7 @@ pipeline {
         stage('Stop Curr Container') {
             steps {
                 catchError {
-                    sh 'docker container stop landingpage'
+                    sh 'docker container stop homepage'
                 }           
                 echo currentBuild.result
                 
@@ -44,13 +44,13 @@ pipeline {
      
         stage('Build Dockerfile') {
             steps {
-                sh 'docker build -t landingpage .'
+                sh 'docker build -t homepage .'
                 sh 'ls'
             }
         }
         stage('Start Container') {
             steps {
-                sh 'docker run --expose 80 --name landingpage --net web --restart unless-stopped -d landingpage'
+                sh 'docker run --expose 80 --name homepage --net web --restart unless-stopped -d homepage'
             }
         }
     }
