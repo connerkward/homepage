@@ -1,0 +1,47 @@
+name: Build and Deploy Next.js Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your main branch
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the public repo (your website)
+      - name: Checkout Public Repo
+        uses: actions/checkout@v2
+
+      # Step 2: Pull content from the private repository
+      - name: Checkout Private Repo
+        uses: actions/checkout@v2
+        with:
+          repository: connerkward/blogcontent  # Your private repo
+          token: ${{ secrets.GH_PAT }}  # Use your Personal Access Token (PAT)
+          path: blogcontent
+
+      # Step 3: Inject Markdown files (content) into the public repo
+      - name: Inject Markdown Files
+        run: |
+          rm -rf content
+          mkdir -p content
+          cp -r blogcontent/posts/* content/
+
+      # Step 4: Install dependencies and build the Next.js site
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build and Export Next.js Site
+        run: |
+          npx next build
+          npx next export
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out  # Next.js export outputs to the "out" directory by default
