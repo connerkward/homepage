@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+     # Step 1: Set up Node.js 16
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+            node-version: '16'
       # Step 1: Checkout the public repo (your website)
       - name: Checkout Public Repo
         uses: actions/checkout@v2
