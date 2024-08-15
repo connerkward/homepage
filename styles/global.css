@@ -44,11 +44,12 @@
   --legible-orange: #e87f10;
   /* SECTIONS */
   --footerfontcolor: var(--fadedbrownnew);
-  --maxwidth: 96%;
+  --maxwidth: 100rem;
   /* --maxwidth: 1050px; */
   /* Color scheme  */
   --colorscheme: "dark";
   --highlight-color: var(--legible-orange);
+  --footer-height: 6rem;
 }
 
 /* Assumes Dark Mode */
@@ -71,28 +72,49 @@
 /* off purple #af8772 */
 
 html {
-  background-color: var(--trueblack);
   font-family: var(--bodyfont);
   color: var(--offwhite);
   font-weight: 300;
-  background-image: url("/public/img/1.jpeg");
-  background-size: cover;
 }
-
-/* max width of website */
 
 body {
   margin: 0 auto !important;
-  float: none !important;
-  
+  /* float: none !important; */
+  width: 95%;
+
+  flex: 1;
+  background-color: var(--trueblack);
+
 }
 
 .main {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+
+  width: 96.5%;
+
   max-width: var(--maxwidth);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+
+  height: 94vh;
 
 }
+
+/* Ensure the body and html take full height */
+html,
+body {
+  height: 99%;
+  margin: 0;
+  /* background-color: red; */
+}
+
 
 a {
   color: var(--darkorange);
@@ -135,7 +157,7 @@ p {
 /* NAV ================== */
 
 nav {
-  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   margin-bottom: 1rem;
   background-color: none;
   font-size: large;
@@ -187,28 +209,56 @@ nav ol #logo {
 
 .headline {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  /* padding-top: 3rem;  */
+  margin-bottom: 3rem;
+  column-gap: 10vw;
+  row-gap: -2rem;
+  /* background-color: aqua; */
+  white-space: nowrap;
+  overflow: auto;
+  flex-wrap: wrap;
 }
 
 .headline .bigboldtitle {
   font-family: var(--scifiheadlinefont), "-apple-system", system-ui, 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: bold;
+  /* background-color: red; */
+
+
 }
 
 .headline .smallboldtitle {
   margin: auto;
-  margin-top: 2.5rem;
+  margin-top: 2.6rem;
   text-align: center;
+  width: 5rem;
+  /* background-color: red; */
+  flex: 1 1 25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  /* background-color: blue; */
+
+
 }
 
 /* MORE STORIES ================== */
 
+.innerbody {
+  flex-grow: 1;
+  /* background-color: #e87f10; */
+  height: auto;
+  font-size: 2rem;
+}
+
+
+/* MORE STORIES ================== */
+
 .midboldtitle {
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
   font-weight: 600;
   font-size: 3.5rem;
   text-decoration-line: none;
@@ -233,6 +283,7 @@ nav ol #logo {
   gap: 3%;
   display: flex;
   flex-direction: row;
+  margin-bottom: 3rem;
 }
 
 /* MORESTORIES -> POST PREVIEW ========= */
@@ -314,6 +365,10 @@ nav ol #logo {
   color: var(--offwhite);
 }
 
+.posttag:hover a {
+  color: var(--trueblack);
+}
+
 .posttagcount {
   display: inline-flex;
   border-style: solid;
@@ -347,6 +402,7 @@ nav ol #logo {
   width: fit-content;
 }
 
+
 .coverimage {
   opacity: 95%;
   /* Not sure how I feel about the rounded photos */
@@ -375,6 +431,7 @@ nav ol #logo {
   flex-direction: row;
   justify-content: center;
   gap: 2%;
+  /* background-color: red; */
 }
 
 .paginationnavitem {
@@ -386,6 +443,24 @@ nav ol #logo {
 .paginationnavitem:hover {
   color: var(--trueblack);
   background-color: var(--offwhite);
+}
+
+.pindexcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Even space between items, including the pagination */
+  /* background-color: #e87f10; */
+  gap: 1rem;
+  padding: 1rem;
+  /* Optional: add padding around the container */
+  min-height: 40vh;
+}
+
+.pindexnavcontainer {
+  /* background-color: red; */
+  margin-top: auto;
+  /* Ensure the pagination stays at the bottom when content is short */
 }
 
 .pindextitlecontainer {
@@ -419,12 +494,9 @@ nav ol #logo {
 /* FOOTER ============= */
 
 footer {
-  /* width: 100vw; */
-  /* margin-left: -15% !important; */
-  /* margin-right: -15% !important; */
+
   font-family: var(--technicalfont);
-  /* width: 100%; */
-  background-color: var(--nearblack) !important;
+  /* background-color: red; */
   color: var(--footerfontcolor);
   display: flex;
   font-size: large;
@@ -432,16 +504,18 @@ footer {
   justify-content: space-around;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  margin-top: 1rem;
-
+  align-self: center;
+  /* border-radius: 20px; */
+  width: 110%;
 
 }
 
 .footercontainer {
   margin: 1rem;
   text-align: center;
-  background-color: var(--nearblack) !important;
+  /* background-color: var(--nearblack) !important; */
 }
+
 
 .footercontainer .strong {
   background-color: var(--nearblack) !important;
@@ -454,10 +528,12 @@ footer {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
   .errorpagetext {
     margin-top: 28vh;
     margin-bottom: 29vh;
   }
+
   nav {
     margin: 0;
     padding: 0;
@@ -465,6 +541,7 @@ footer {
     /* background-color: var(--nearblack); */
     padding-bottom: 0.5rem;
   }
+
   nav ol {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -475,28 +552,34 @@ footer {
     justify-content: space-between;
     column-gap: 1rem;
   }
+
   nav ol #logo {
     /* padding-right: 100vmin; */
     margin-right: 10rem;
     margin-bottom: 0.75rem;
   }
+
   nav ol #nav-right {
     display: none;
   }
+
   .n {
     margin: 120rem;
   }
+
   .errorpagecontainer {
     flex-direction: column;
     margin-top: 25%;
     gap: 0rem;
   }
+
   .headline {
     margin-top: 0rem;
     margin-bottom: 0.5rem;
     flex-wrap: wrap;
     max-width: var(--maxwidth);
   }
+
   .headline .bigboldtitle {
     font-size: 4.5rem;
     /* margin-bottom: 0.5rem; */
@@ -504,6 +587,7 @@ footer {
     padding: 0rem;
     margin-bottom: 0.5rem;
   }
+
   .headline .smallboldtitle {
     font-size: 1.5rem;
     align-self: center;
@@ -511,14 +595,17 @@ footer {
     padding: 0rem;
     /* background-color: var(--anothergrey); */
   }
+
   .coverimage {
     margin-right: -1rem;
     margin-left: -1rem;
   }
+
   .morestoriescontainer {
     flex-direction: column;
     gap: 1.5rem;
   }
+
   .morestories .midboldtitle {
     margin: 0rem;
     padding: 0rem;
@@ -526,6 +613,7 @@ footer {
     padding-top: 1rem;
     /* background-color: var(--darkorange); */
   }
+
   .tagfeed .midboldtitle {
     margin: 0rem;
     padding: 0rem;
@@ -533,23 +621,28 @@ footer {
     padding-top: 1rem;
     /* background-color: var(--darkorange); */
   }
+
   .postpreview {
     margin-bottom: 0rem;
     /* background-color: var(--anothergrey); */
   }
+
   .postpreviewtext {
     font-size: larger;
   }
+
   footer {
     flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
   }
+
   .footercontainer {
     margin: .2rem;
     /* margin-right: 1rem;
     margin-left: 1rem; */
   }
+
   .pindextitlecontainer {
     gap: 0.25rem;
     margin: 0rem;
@@ -558,20 +651,25 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+
   .paginationtitle {
     display: none;
   }
+
   .mobilepaginationtitle {
     display: contents;
   }
+
   .pindextitlecontainer .pagingationnav {
     margin: 0rem;
     justify-self: right;
   }
+
   .pindextitlecontainer .pagingationnav .paginationnavitem {
     font-size: 2rem;
     margin: 0rem;
   }
+
   .pindextitlecontainer .midboldtitle {
     margin: 0rem;
     padding: 0rem;
@@ -579,6 +677,7 @@ footer {
     padding-top: 1rem;
     flex-shrink: 0;
   }
+
   /* PINDEX STORIES */
   /* .pindexstories .postpreview .postpreviewdata {
     max-width: 50%;
@@ -588,6 +687,7 @@ footer {
     flex-wrap: nowrap;
     flex-direction: column;
   }
+
   .pindexstories li {
     max-width: 100%;
   }
@@ -603,29 +703,37 @@ footer {
     color: var(--trueblack);
     font-weight: 400;
   }
+
   a {
     color: var(--trueblue);
   }
+
   ::selection {
     background-color: var(--trueblue);
     color: var(--offbrightwhite);
   }
+
   nav {
     background-color: none;
   }
+
   nav ol li a {
     color: var(--trueblack);
   }
+
   .bigboldtitle {
     font-weight: 700;
   }
+
   .midboldtitle a {
     font-weight: 700;
     color: var(--trueblack);
   }
+
   .postpreviewtitle a {
     color: var(--trueblack);
   }
+
   .posttag {
     border-style: solid;
     border-radius: 10px;
@@ -634,6 +742,7 @@ footer {
     border-color: var(--anothergrey);
     border-width: 1px;
   }
+
   .posttag a {
     font-weight: 600;
     color: var(--trueblack);
@@ -642,13 +751,16 @@ footer {
   .posttagcount {
     border-color: var(--anothergrey);
   }
+
   footer {
     background-color: var(--nearblack2);
     color: var(--nearblack);
   }
+
   .paginationnavitem {
     color: var(--trueblack);
   }
+
   .pindextitlecontainer .midboldtitle {
     font-size: 2.5rem;
   }

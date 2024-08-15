@@ -19,15 +19,19 @@ var PaginationIndex = (props) => {
                 <div className="midboldtitle mobilepaginationtitle">P{props.pindex}</div>
                 <div className="midboldtitle paginationtitle">Page {props.pindex}</div>
                 <PaginationNav props={props} />
-            </div>
-            <ol className="pindexstories">
-                {props.posts.map((post) => {
-                    return <li key={post.postSlug}>
-                        <PostPreview className="postpreview" props={post}></PostPreview>
-                    </li>
-                })}
-            </ol>
-            <PaginationNav props={props}/>
+            </div >
+            <div className="pindexcontainer">
+                <ol className="pindexstories">
+                    {props.posts.map((post) => {
+                        return <li key={post.postSlug}>
+                            <PostPreview className="postpreview" props={post}></PostPreview>
+                        </li>
+                    })}
+                </ol>
+                    <div className="pindexnavcontainer">
+                        <PaginationNav props={props} />
+                    </div>
+                </div>
         </div>
     )
 }
@@ -58,7 +62,7 @@ export async function getStaticProps({ params }) {
         matteredcontents.data.slug = filename.replace(/\.[^/.]+$/, "")
         return matteredcontents
     }).sort(function (a, b) { return b.data.date - a.data.date });
-    
+
     // number of pages (based on 10 per page)
     // pagination : [{data:{}, content:""},]
     const pageCount = Math.ceil(postData.length / POSTSPERPAGE)
@@ -66,9 +70,9 @@ export async function getStaticProps({ params }) {
     var postsAppended = 0;
     for (let currpage = 1; currpage < pageCount + 1; currpage++) {
         // index of page (1->pageCount)
-        var page = {pindex: currpage.toString(), posts:[]}
+        var page = { pindex: currpage.toString(), posts: [] }
         // 5 per page 
-        for (var i of lib.range(0, POSTSPERPAGE-1)) {
+        for (var i of lib.range(0, POSTSPERPAGE - 1)) {
             if (postsAppended != postData.length) {
                 page.posts.push(postData[postsAppended])
                 postsAppended++;
@@ -76,7 +80,7 @@ export async function getStaticProps({ params }) {
         }
         pagination.push(page)
     }
-    
+
     // GET ALL TAGS(with count)
     var tagCounts = lib.tagCountsContent(postData)
 
@@ -100,14 +104,14 @@ export async function getStaticProps({ params }) {
         }
     }
     params.posts = []
-    pagination[params.pindex-1].posts.map((post) => { 
+    pagination[params.pindex - 1].posts.map((post) => {
         params.posts.push(templatePost(post));
     })
-     
+
     params.validpages = [...lib.range(1, pagination.length)]
     // params : {pages:[{posts:[post,], pindex:}]}
     // get posts from 
     params.active = "blog"
-    return {props: params}
+    return { props: params }
 }
 export default PaginationIndex

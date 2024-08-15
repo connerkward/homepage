@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import PostPreview from '../components/PostPreview'
 import MoreStories from '../components/MoreStories';
+import Footer from '../components/Footer';
 import Headline from '../components/Headline'
 import path from 'path'
 import { promises as fs } from 'fs'
@@ -18,6 +19,7 @@ var Blog = (props) => {
       <PostPreview props={props.posts.post1}></PostPreview>
       <MoreStories props={props}></MoreStories>
       <TagFeed props={props}></TagFeed>
+      <Footer></Footer>
     </div>
   );
 }

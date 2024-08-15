@@ -26,7 +26,7 @@ export default function MyApp(props) {
         </Head>
         <Nav props={{ props: { active: props.pageProps.active}}}></Nav>
         <Component {...props} />
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
     </html>
     )
 }
